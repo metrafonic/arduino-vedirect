@@ -21,7 +21,7 @@ VEDirect::~VEDirect() {
 }
 
 bool VEDirect::HandleLine() {
-    if (!VESerial.available()>0)
+    if (VESerial.available()<1)
         return 0;
     VESerial.setTimeout(200);
     String serialline = VESerial.readStringUntil(13);
