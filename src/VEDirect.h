@@ -2,7 +2,7 @@
 
 class VEDirect {
 public:
-	VEDirect(HardwareSerial& port);
+	VEDirect(Stream& port);
 	virtual ~VEDirect();
 	bool HandleLine();
     void PrintEverySecond();
@@ -10,5 +10,5 @@ public:
     char* GetValue(int i);
     bool Collect();
 private:
-	HardwareSerial& VESerial;
+	Stream& VESerial;
 };

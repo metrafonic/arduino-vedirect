@@ -8,7 +8,7 @@ char value[num_keywords][value_bytes]       = {0};  // The array that holds the 
 static byte currentIndex = 0;
 static byte futureIndex = 0;
 
-VEDirect::VEDirect(HardwareSerial& port):
+VEDirect::VEDirect(Stream& port):
 	VESerial(port)
 	// Initialise the serial port that the
 	// VE.Direct device is connected to and
@@ -19,6 +19,7 @@ VEDirect::VEDirect(HardwareSerial& port):
 VEDirect::~VEDirect() {
 	// virtual destructor
 }
+
 
 bool VEDirect::HandleLine() {
     if (VESerial.available()<1)

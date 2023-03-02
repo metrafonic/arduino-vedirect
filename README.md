@@ -1,5 +1,5 @@
 # Arduino-vedirect
-Arduino library for reading ve.direct text protocol messages
+Arduino library for reading ve.direct text protocol messages. Supports hardware and software serial
 
 The `Collect()` method listens for incoming serial data and returns as soon as the checksum matches. 
 This results in a wait of less than 1 second for data. Now we can call `GetValue()` to retrieve the different values we got from the collection.
