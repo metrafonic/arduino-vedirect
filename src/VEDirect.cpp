@@ -55,6 +55,9 @@ bool VEDirect::HandleLine() {
     {
         byte checksum = 0;
         for (int x = 0; x < num_keywords; x++) {
+            if(strlen(recv_value[x]) == 0 || strlen(recv_label[x]) == 0) {
+                continue;
+            }
             char *v = recv_value[x];
             char *l = recv_label[x];
             while (*v) {
